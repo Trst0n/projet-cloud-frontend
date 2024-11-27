@@ -1,0 +1,19 @@
+<p>articles works!</p>
+
+<table>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+    <tr>
+      <td>{{ article.name }}</td>
+      <td>{{ article.description }}</td>
+      <td>{{ article.image }}</td>
+      <td><button [routerLink]="['/edit-article/',article.id]">Edit</button>
+        <button (click)="remove(article.id)">Delete</button>
+      </td>
+      <td><button [routerLink]="['/']">Back</button></td>
+    </tr>
+  </table>
